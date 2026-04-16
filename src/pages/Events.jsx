@@ -28,17 +28,19 @@ const Events = () => {
               theme="From Concept to Impact"
               delay="0.1s"
               alignment="left"
+              link="https://forms.gle/QRR8bxC9ceQ9bvcZ6"
             />
             {/* Empty space for alternating layout */}
             <div className="empty-node"></div>
 
             <div className="empty-node"></div>
             <EventCard
-              title="The Cognitive Interface"
+              title="Kaleidoscope '26"
               speaker="Dr. Elena Sterling"
               theme="Technology"
               delay="0.2s"
               alignment="right"
+              link="https://forms.gle/cKiXTeED17Gt9XRB8"
             />
 
             <EventCard
@@ -47,6 +49,7 @@ const Events = () => {
               theme="Architecture"
               delay="0.3s"
               alignment="left"
+              link="https://google.com"
             />
             <div className="empty-node"></div>
           </div>
