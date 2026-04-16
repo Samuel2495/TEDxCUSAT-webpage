@@ -1,0 +1,89 @@
+.team-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.team-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.team-hero .headline-lg {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.team-section-header {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--surface-container-high);
+}
+
+.team-section-header:first-of-type {
+  margin-top: 0;
+}
+
+.team-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.leadership-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.members-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.volunteer-cta {
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.volunteer-cta .headline-lg {
+  margin: 2rem auto 4rem;
+  max-width: 800px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--on-primary);
+  border: 2px solid var(--on-primary);
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border-radius: var(--radius-brutal);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--on-primary);
+  color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .leadership-grid, .members-grid {
+    grid-template-columns: 1fr;
+  }
+}

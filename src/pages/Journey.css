@@ -1,0 +1,29 @@
+.journey-hero {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+.journey-hero .headline-lg {
+  max-width: 800px;
+  margin-top: 2rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-cta {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.timeline-cta .headline-lg {
+  margin-bottom: 2rem;
+}

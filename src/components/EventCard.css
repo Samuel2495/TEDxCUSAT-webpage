@@ -1,0 +1,67 @@
+.event-card {
+  background-color: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--primary);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-brutal);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 
+    0 0 10px rgba(188, 0, 30, 0.3),
+    0 0 20px rgba(188, 0, 30, 0.1);
+}
+
+.event-card:hover {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border-color: #ff2a4d;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 0 25px rgba(188, 0, 30, 0.8),
+    0 0 50px rgba(188, 0, 30, 0.4);
+}
+
+.event-card:hover .text-primary {
+  color: var(--on-primary);
+  opacity: 0.8;
+}
+
+.event-card:hover .event-action {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.event-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.event-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.event-speaker {
+  opacity: 0.8;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.event-action {
+  margin-top: auto;
+  align-self: flex-end;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.align-right {
+  text-align: right;
+}
+.align-right .event-action {
+  align-self: flex-start;
+  transform: translateX(10px);
+}

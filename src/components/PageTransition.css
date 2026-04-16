@@ -1,0 +1,136 @@
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.transition-overlay.active {
+  visibility: visible;
+}
+
+/* 🔥 Diagonal glowing slashes */
+.slash {
+  position: absolute;
+  width: 180%;
+  height: 35%;
+  left: -40%;
+  background: linear-gradient(120deg,
+      transparent 0%,
+      var(--primary) 40%,
+      #ff2a4d 50%,
+      var(--primary) 60%,
+      transparent 100%);
+
+  transform: rotate(-15deg) translateX(-120%);
+  filter: blur(10px);
+
+  /* Glow effect */
+  box-shadow:
+    0 0 20px rgba(188, 0, 30, 0.8),
+    0 0 40px rgba(188, 0, 30, 0.6),
+    0 0 80px rgba(188, 0, 30, 0.4);
+
+  opacity: 0.9;
+}
+
+/* 🎬 Different vertical positions */
+.slash-1 {
+  top: 5%;
+}
+
+.slash-2 {
+  top: 25%;
+}
+
+.slash-3 {
+  top: 35%;
+}
+
+.slash-4 {
+  top: 55%;
+}
+
+.slash-5 {
+  top: 70%;
+}
+
+.slash-6 {
+  top: 85%;
+}
+
+/* ⚡ Staggered animation */
+.transition-overlay.active .slash-1 {
+  animation: slashMove 1.4s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation-delay: 0s;
+}
+
+.transition-overlay.active .slash-2 {
+  animation: slashMove 1.4s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation-delay: 0.15s;
+}
+
+.transition-overlay.active .slash-3 {
+  animation: slashMove 1.4s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation-delay: 0.08s;
+}
+
+.transition-overlay.active .slash-4 {
+  animation: slashMove 1.4s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+.transition-overlay.active .slash-5 {
+  animation: slashMove 1.4s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation-delay: 0.12s;
+}
+
+.transition-overlay.active .slash-6 {
+  animation: slashMove 1.4s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation-delay: 0.18s;
+}
+
+/* 🎥 Animation */
+@keyframes slashMove {
+  0% {
+    transform: rotate(-15deg) translateX(-120%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(-15deg) translateX(0%);
+  }
+
+  100% {
+    transform: rotate(-15deg) translateX(120%);
+    opacity: 0;
+  }
+}
+
+/* 🏔️ Page Entry Animations */
+.page-motion-wrapper {
+  animation: pageFadeInScale 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.6s; /* Sync with the climax of the slashes */
+  transform-origin: center center;
+  width: 100%;
+}
+
+@keyframes pageFadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+    filter: blur(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}

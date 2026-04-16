@@ -1,0 +1,68 @@
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 2rem 4rem;
+  margin-bottom: 0;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+  border-right: 2px solid var(--primary);
+  /* Make sure there are no gaps in the border line */
+  margin-right: -1px;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+  border-left: 2px solid var(--primary);
+  margin-left: -1px;
+}
+
+.timeline-node {
+  position: absolute;
+  top: 4rem;
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary);
+  /* 0px radius - square nodes (Intellectual Brutalism definition) */
+}
+
+.timeline-item.left .timeline-node {
+  right: -6px;
+}
+
+.timeline-item.right .timeline-node {
+  left: -6px;
+}
+
+.timeline-content {
+  background-color: var(--surface-container-lowest);
+  padding: 2rem;
+  border-radius: var(--radius-brutal);
+}
+
+.timeline-title {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 1rem;
+  }
+  .timeline-item.left, .timeline-item.right {
+    left: 0;
+    text-align: left;
+    border-left: 2px solid var(--primary);
+    border-right: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .timeline-item.left .timeline-node, .timeline-item.right .timeline-node {
+    left: -6px;
+    right: auto;
+  }
+}

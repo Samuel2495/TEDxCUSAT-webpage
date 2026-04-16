@@ -1,0 +1,79 @@
+.team-card {
+  position: relative;
+  background-color: var(--surface-container-lowest);
+  border: 1px solid var(--surface-container-low);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-image-container {
+  aspect-ratio: 4 / 5;
+  background-color: var(--surface-container-high);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-profile-image {
+  transform: scale(1.05); /* Interactive scale hover */
+}
+
+.team-card.large .team-image-container {
+  padding-bottom: 100%; /* 1:1 aspect ratio for leaders */
+}
+
+/* Simulate B&W image */
+.team-image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(45deg, #e0e0e0 25%, transparent 25%, transparent 75%, #e0e0e0 75%, #e0e0e0), repeating-linear-gradient(45deg, #e0e0e0 25%, #f0f0f0 25%, #f0f0f0 75%, #e0e0e0 75%, #e0e0e0);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Red overlay that multiplies colors for duotone effect */
+.team-duotone-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  mix-blend-mode: color; /* Or multiply depending on actual image */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.team-card:hover .team-duotone-overlay {
+  opacity: 1;
+}
+
+.team-card:hover .team-image-placeholder {
+  background-color: var(--primary);
+}
+
+.team-content {
+  padding: 1.5rem;
+}
+
+.team-content .label-sm {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}

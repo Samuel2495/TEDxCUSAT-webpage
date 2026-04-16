@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@font-face {
+  font-family: 'Stardock';
+  src: url('./assets/fonts/Stardock.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Universo';
+  src: url('./assets/fonts/Fontspring-DEMO-universo-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Universo';
+  src: url('./assets/fonts/Fontspring-DEMO-universo-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  font-size: 90%;
+}
+
+:root {
+  --primary: #BC001E;
+  --primary-container: #EB0028;
+  --background: #000000;
+  --on-background: #F9F9F9;
+  --on-primary: #FFFFFF;
+  --surface: #0a0a0a;
+  --surface-container-low: #111111;
+  --surface-container-lowest: #1a1a1a;
+  --outline: #333333;
+  --outline-variant: #222222;
+  --tertiary: #00638C;
+  --font-family: 'Universo', sans-serif;
+  --font-accent: 'Stardock', sans-serif;
+  --radius-brutal: 0px;
+  --shadow-atmospheric: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom Font Mappings */
+.hero-title,
+.event-title,
+.milestone-box h3,
+.team-section-header h2,
+.team-hero h1 {
+  font-family: var(--font-accent) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+}
+
+/* Bold Headings (Universo Bold) */
+h1,
+h2,
+h3,
+h4,
+.headline-lg,
+.display-lg {
+  font-family: 'Universo', sans-serif;
+  font-weight: bold;
+}
+
+/* Re-apply Stardock for specific items that might be caught by the above rule */
+.hero-title,
+.event-title,
+.milestone-box h3,
+.team-section-header h2,
+.team-hero h1 {
+  font-family: var(--font-accent) !important;
+}
+
+.counter-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: var(--on-background);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Typography Scale */
+.display-lg {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.headline-lg {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.body-lg {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Utilities */
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
