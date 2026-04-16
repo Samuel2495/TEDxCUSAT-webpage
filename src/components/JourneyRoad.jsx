@@ -3,7 +3,7 @@ import './JourneyRoad.css';
 
 const milestones = [
   { year: "2019", title: "UN-QUINTESSENTIAL", description: "Featuring Dr. M.R. Rajagopal and S. Somnath, the inaugural TEDxCUSAT celebrated humanity and laid a foundation for boundary-pushing innovation." },
-  { year: "2021", title: "PAUSE.RESEST.RESTART!!", description: "Post-pandemic, TEDxCUSAT served as a platform for rejuvenation and hope. By sharing diverse visions for the future, the event inspired attendees to rebuild with resilience and renewed ambition." },
+  { year: "2021", title: "PAUSE.RESEST.\nRESTART!!", description: "Post-pandemic, TEDxCUSAT served as a platform for rejuvenation and hope. By sharing diverse visions for the future, the event inspired attendees to rebuild with resilience and renewed ambition." },
   { year: "2022", title: "TRANSCENDENCE: Beyond All Bounds", description: "Through stories of breaking barriers and exploring the unknown, the event inspired the audience to surpass their limits and strive for extraordinary greatness." },
   { year: "2023", title: "DIVERGENCE: Reframing Radicals", description: "Thought leaders challenged traditional norms to inspire innovation, empowering attendees to embrace radical change as a powerful force for progress." },
   { year: "2024", title: "KALEIDOSCOPE", description: "TEDx CUSAT’s Kaleidoscope: Alchemy of Voices was an inspiring success, featuring diverse speakers who captivated the audience through shared insight and powerful connection." }

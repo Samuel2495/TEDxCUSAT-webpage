@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import aboutTeamImg from '../assets/about/about_teampic.webp';
 
 const About = () => {
   return (
@@ -23,7 +24,7 @@ const About = () => {
         <div className="content-container asymmetric-layout">
           <div className="image-col animate-slide-up">
             <div className="about-image-frame">
-              <img src="/Speakers/ahmed_al_kaashekh.jpg" alt="TEDx Stage" className="about-featured-img" />
+              <img src={aboutTeamImg} alt="TEDx Stage" className="about-featured-img" />
             </div>
           </div>
           <div className="content-col animate-slide-up" style={{ animationDelay: '0.2s' }}>
