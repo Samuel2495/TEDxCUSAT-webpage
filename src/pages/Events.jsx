@@ -26,6 +26,7 @@ const Events = () => {
               title="Genesis"
               speaker="Marcus Thorne"
               theme="From Concept to Impact"
+              date="31 JAN 2026"
               delay="0.1s"
               alignment="left"
               link="https://forms.gle/QRR8bxC9ceQ9bvcZ6"
@@ -38,6 +39,7 @@ const Events = () => {
               title="Kaleidoscope '26"
               speaker="Dr. Elena Sterling"
               theme="Technology"
+              date="03 MAY 2026"
               delay="0.2s"
               alignment="right"
               link="https://forms.gle/cKiXTeED17Gt9XRB8"
@@ -47,11 +49,23 @@ const Events = () => {
               title="Designing for Silence"
               speaker="Sarah Jenkins"
               theme="Architecture"
+              date="12 JUN 2026"
               delay="0.3s"
               alignment="left"
               link="https://google.com"
             />
             <div className="empty-node"></div>
+
+            <div className="empty-node"></div>
+            <EventCard
+              title="Echoes of Tomorrow"
+              speaker="Julian Reeves"
+              theme="Sustainability"
+              date="20 SEP 2026"
+              delay="0.4s"
+              alignment="right"
+              link="https://google.com"
+            />
           </div>
         </div>
       </section>

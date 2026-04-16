@@ -1,7 +1,7 @@
 import React from 'react';
 import './EventCard.css';
 
-const EventCard = ({ title, speaker, theme, delay = "0s", alignment = "left", link = "https://google.com" }) => {
+const EventCard = ({ title, speaker, theme, date, delay = "0s", alignment = "left", link = "https://google.com" }) => {
   return (
     <a 
       href={link} 
@@ -11,7 +11,10 @@ const EventCard = ({ title, speaker, theme, delay = "0s", alignment = "left", li
       style={{ animationDelay: delay, display: 'block' }}
     >
       <div className="event-card-content">
-        <span className="label-sm text-primary">{theme}</span>
+        <div className="event-meta">
+          <span className="label-sm text-primary">{theme}</span>
+          {date && <span className="label-sm event-date">{date}</span>}
+        </div>
         <h3 className="headline-sm event-title">{title}</h3>
         <p className="body-md event-speaker">{speaker}</p>
         <div className="event-action">

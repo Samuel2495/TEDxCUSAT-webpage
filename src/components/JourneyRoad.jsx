@@ -2,10 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import './JourneyRoad.css';
 
 const milestones = [
-  { year: "The Beginning", title: "THE SPARK", description: "Founded by three visionary students aiming to bring world-class ideas to our campus. The license was secured after 8 months of rigorous application." },
-  { year: "2023", title: "CURRENTS OF CHANGE", description: "Our inaugural main stage event. 100 attendees gathered in the Great Hall to hear 12 local speakers redefine what it means to be a global citizen." },
-  { year: "2024", title: "UNBOUNDED", description: "After a year of digital pivots, we returned with our largest production yet. Our talks reached 1M+ views on the global TEDx YouTube channel." },
-  { year: "Present", title: "KINETIC LEGACY", description: "Now a cornerstone of campus life, our team of 50+ students continues to push the boundaries of storytelling and live production." }
+  { year: "2019", title: "UN-QUINTESSENTIAL", description: "Featuring Dr. M.R. Rajagopal and S. Somnath, the inaugural TEDxCUSAT celebrated humanity and laid a foundation for boundary-pushing innovation." },
+  { year: "2021", title: "PAUSE.RESEST.RESTART!!", description: "Post-pandemic, TEDxCUSAT served as a platform for rejuvenation and hope. By sharing diverse visions for the future, the event inspired attendees to rebuild with resilience and renewed ambition." },
+  { year: "2022", title: "TRANSCENDENCE: Beyond All Bounds", description: "Through stories of breaking barriers and exploring the unknown, the event inspired the audience to surpass their limits and strive for extraordinary greatness." },
+  { year: "2023", title: "DIVERGENCE: Reframing Radicals", description: "Thought leaders challenged traditional norms to inspire innovation, empowering attendees to embrace radical change as a powerful force for progress." },
+  { year: "2024", title: "KALEIDOSCOPE", description: "TEDx CUSAT’s Kaleidoscope: Alchemy of Voices was an inspiring success, featuring diverse speakers who captivated the audience through shared insight and powerful connection." }
 ];
 
 const JourneyRoad = () => {
@@ -35,15 +36,15 @@ const JourneyRoad = () => {
     };
   }, []);
 
-  // Smooth SVG curve wrapping back and forth
-  const svgCurve = "M 50 0 C 90 10, 90 15, 50 25 C 10 35, 10 40, 50 50 C 90 60, 90 65, 50 75 C 10 85, 10 90, 50 100";
+  // Smooth SVG curve wrapping back and forth for 5 milestones
+  const svgCurve = "M 50 0 C 90 5, 90 15, 50 20 C 10 25, 10 35, 50 40 C 90 45, 90 55, 50 60 C 10 65, 10 75, 50 80 C 90 85, 90 95, 50 100";
 
   return (
     <div className="journey-2d-container">
       <div className="journey-header animate-slide-up">
         <h1 className="display-lg">JOURNEY</h1>
       </div>
-      
+
       <div className="road-svg-wrapper">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="winding-road-svg">
           {/* Red Borders */}
@@ -59,8 +60,8 @@ const JourneyRoad = () => {
         {milestones.map((m, idx) => {
           const isLeft = idx % 2 === 0;
           return (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`milestone-node ${isLeft ? 'left-align' : 'right-align'}`}
               ref={(el) => (observerRefs.current[idx] = el)}
             >

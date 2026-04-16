@@ -42,6 +42,23 @@
   height: 100%;
 }
 
+.event-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.event-date {
+  opacity: 0.6;
+  color: var(--on-background);
+}
+
+.event-card:hover .event-date {
+  color: var(--on-primary);
+  opacity: 0.9;
+}
+
 .event-title {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;

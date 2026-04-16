@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  height: 2000px;
+  height: 3000px;
   /* Gives the user plenty of room to scroll down */
   padding: 100px 0;
 }
@@ -133,18 +133,22 @@
   These match the cubic bezier points at 12.5%, 37.5%, 62.5%, and 87.5% vertical offset
 */
 .milestone-node:nth-child(1) {
-  top: 15%;
+  top: 10%;
 }
 
 .milestone-node:nth-child(2) {
-  top: 40%;
+  top: 30%;
 }
 
 .milestone-node:nth-child(3) {
-  top: 65%;
+  top: 50%;
 }
 
 .milestone-node:nth-child(4) {
+  top: 70%;
+}
+
+.milestone-node:nth-child(5) {
   top: 90%;
 }
 
